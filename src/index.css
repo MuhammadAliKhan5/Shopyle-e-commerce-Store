@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Ensure no parent blocks the sticky behavior */
+html, body {
+  overflow-x: visible !important;
+  height: auto !important;
+}
+
+#root {
+  overflow: visible !important;
+}
+
+/* Optional: Add smooth scrolling for better feel */
+html {
+  scroll-behavior: smooth;
+}
+
+#shopify-section-header {
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+.header-wrapper, .header {
+    overflow: visible !important;
+}
+
+/* This targets the specific dropdown lists */
+.disclosure__list, .localization-form__list {
+    display: block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+/* Force the header to stay on top */
+#shopify-section-header {
+    z-index: 999 !important;
+    position: relative !important;
+}
+
+/* Ensure the header container doesn't cut off content */
+.header-wrapper, .header {
+    overflow: visible !important;
+}
+
+/* Force the specific dropdown lists to the front */
+.disclosure__list, .localization-form__list {
+    z-index: 10000 !important;
+    position: absolute !important;
+}
+
+/* Custom Scrollbar for Testimonials */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px; /* Height for horizontal scroll */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb; 
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ef4444; /* Turns red on hover */
+}
+
+/* Snap scrolling animation */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
